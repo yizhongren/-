@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="sass/lndex5.css" />
+		<link rel="stylesheet" type="text/css" href="../font_6m6zcrhj8twqaor/iconfont.css" />
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="x">
+		<header>
+			<img src="img/社区/1.png" />
+		</header>
+		<nav>
+			<ul>
+				<li class="bor">首页</li>
+				<li>热点</li>
+				<li>闲聊</li>
+				<li>交友</li>
+				<li>我的话题</li>
+				<li><i class="iconfont icon-fenxiang"></i></li>
+			</ul>
+		</nav>
+		</div>
+		<div class="a">
+			<span><img src="img/社区/6.png"/>热门话题</span>
+			<sanp>></sanp>
+		</div>
+		<div class="b">
+			<ul>
+				<li><img src="img/社区/2.png" /></li>
+				<li><img src="img/社区/3.png" /></li>
+				<li><img src="img/社区/4.png" /></li>
+				<li><img src="img/社区/5.png" /></li>
+			</ul>
+		</div>
+		<div class="c">
+			<span><img src="img/社区/6.png"/><h1>七月签到，点我有惊喜</h1></span>
+		</div>
+		<div class="d">
+			<img src="img/社区/7.png" />推荐话题
+		</div>
+		<div class="l">
+			
+		</div>
+		<!--<div class="k">
+			<div class="e">
+				<img src="img/社区/14.png" /><span>机智的水</span><span>Lv190</span>
+				<div><img src="img/社区/9.png" /></div>
+			</div>
+			<div class="f">
+				<span>#活动#</span><l>8 5 狂欢盛典预热，T 1 机甲惊喜来袭飞车一年一度的暑假大型活动还有一周就要和大家见面了 相信各位都迫不及待了吧 这次活动....</l>
+				<img src="img/社区/8.png" />
+				<div class="g">
+					<spann><i class="iconfont icon-biaoqing"></i>56</spann>
+					<spann><i class="iconfont icon-shoucang"></i>33</spann>
+				</nav>
+			</div>
+		</div>
+		</div>
+		<div class="k">
+			<div class="e">
+				<img src="img/社区/10.png" /><span>胖的女孩光芒万丈</span><span>Lv201</span>
+				<div><img src="img/社区/9.png" /></div>
+			</div>
+			<div class="f">
+				<span>#分享#</span><l>【每日攻略】 小橘子神灯技巧！ 小橘子神灯活动从第一期开始就受到了大家的欢迎，筐筐也是点过几期，今天总结一下经验分享给大家....</l>
+				<img src="img/社区/11.png" />
+				<div class="g">
+					<spann><i class="iconfont icon-biaoqing"></i>56</spann>
+					<spann><i class="iconfont icon-shoucang"></i>33</spann>
+				</nav>
+			</div>
+		</div>-->
+
+		<div class="z">
+			<footer>
+				<ul>
+					<a href="index7.html"><li>
+						<img src="img/333.png" />
+						<p >资讯</p>
+					</li>
+					</a>
+					<a href="index2.html">
+					<li>
+						<img src="img/444.png" />
+						<p>发现</p>
+					</li>
+					</a>
+					<a href="index6.html">
+					<li>
+						<img src="img/111.png" />
+						<p>直播</p>
+					</li>
+					</a>
+					<a href="index4.html">
+					<li>
+						<img src="img/222.png" />
+						<p>聊天</p>
+					</li>
+					</a>
+					<a href="index5.html">
+					<li>
+						<img src="img/33.png" />
+						<p  style="color: #fd9528;">社区</p>
+					</li>
+					</a>
+				</ul>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			document.addEventListener('touchmove', function(ev) {
+				ev.preventDefault();
+			}, {
+				passive: false
+			});
+			var myIs = new IScroll('.b', {
+				scrollX: true
+			})
+			
+			$.ajax({
+				type: "get",
+				url: "http://127.0.0.1:7777/index5",
+				async: true,
+				success: function(data) {
+					var obj = JSON.parse(data);
+
+					var aa = obj.aa;
+					var a = '';
+					for(var i = 0; i < aa.length; i++) {
+						a += '<div class="k">'
+						+'<div class="e">'
+								+'<img src="img/社区/'+aa[i].img1+'" /><span>'+aa[i].span1+'</span><span>'+aa[i].span2+'</span>'
+								+'<div><img src="img/社区/'+aa[i].img2+'" /></div>'
+							+'</div>'
+							+'<div class="f">'
+								+'<span>'+aa[i].span3+'</span><l>'+aa[i].i+'</l>'
+								+'<img src="img/社区/'+aa[i].img3+'" />'
+								+'<div class="g">'
+									+'<spann><i class="iconfont icon-biaoqing"></i>56</spann>'
+									+'<spann><i class="iconfont icon-shoucang"></i>33</spann>'
+								+'</nav>'
+							+'</div>'
+							+'</div>'
+					}
+					$('.l').html(a);
+				}
+			});
+		</script>
+	</body>
+
+</html>

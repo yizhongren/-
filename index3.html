@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="sass/index3.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<a href="index2.html"><img src="img/角色/1.png"/></a>
+		</header>
+		<nav>
+			<ul>
+				<li class="bor">基本信息</li>
+				<li>个人背包</li>
+			</ul>
+		</nav>
+		<div class="swiper-container  nx">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" >
+					<img src="img/角色/2.png"/>
+				</div>
+				<div class="swiper-slide" >
+					<img src="img/角色/3.png"/>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var mainSwiper = new Swiper(".nx",{
+				//回调函数  
+				onSlideChangeStart:function(){
+					//console.log(1)
+					//获取激活状态索引值
+					var index = mainSwiper.activeIndex;
+					$("nav li").eq(index).addClass("bor").siblings().removeClass("bor")
+				}
+			});
+			
+			
+			//切换
+			$("nav li").click(function(){
+				//获取当前点击li索引值
+				var index = $(this).index();
+				
+				$("nav li").eq(index).addClass("bor").siblings().removeClass("bor")
+				
+				//mainswiper 根据点击li索引值去切换
+				mainSwiper.slideTo(index)
+			})
+		</script>
+	</body>
+</html>

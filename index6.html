@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="sass/index6.css" />
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<header>
+			<img src="img/直播/1.png" />
+		</header>
+		<nav>
+			<ul>
+				<li class="bor">热门</li>
+				<li>订阅</li>
+			</ul>
+		</nav>
+		<div class="swiper-container  box">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/直播/2.png" /></div>
+				<div class="swiper-slide"><img src="img/直播/3.png" /></div>
+			</div>
+		</div>
+		<div class="swiper-container  nx">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="b">
+			<div class="c">
+				<sapn>全部</sapn><span>更多></span>
+			</div>
+			<ul>
+				<li>
+					<img src="img/直播/4.png" />
+					<p>老湿机/段子手/全能妞</p>
+				</li>
+				<li>
+					<img src="img/直播/5.png" />
+					<p>20177SSC亚军 暖嗓赛王</p>
+				</li>
+				<li>
+					<img src="img/直播/6.png" />
+					<p>粉丝福利王/剧情终结者</p>
+				</li>
+				<li>
+					<img src="img/直播/7.png" />
+					<p>萌澄的中华小曲库</p>
+				</li>
+			</ul>
+		</div>
+		<div class="b">
+			<div class="c">
+				<sapn>美女主播</sapn><span>更多></span>
+			</div>
+			<ul>
+				<li>
+					<img src="img/直播/4.png" />
+					<p>老湿机/段子手/全能妞</p>
+				</li>
+				<li>
+					<img src="img/直播/7.png" />
+					<p>萌澄的中华小曲库</p>
+				</li>
+				<li>
+					<img src="img/直播/8.png" />
+					<p>陕西小萌妹 听我之声抚你</p>
+				</li>
+				<li>
+					<img src="img/直播/9.png" />
+					<p>河北女赛王SSC季军/逗</p>
+				</li>
+			</ul>
+		</div>
+				</div>
+				<div class="swiper-slide" style="background: deepskyblue;width: 100%;
+					height: 680px;">
+					
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="z">
+			<footer>
+				<ul>
+					<a href="index7.html"><li>
+						<img src="img/333.png" />
+						<p >资讯</p>
+					</li>
+					</a>
+					<a href="index2.html">
+					<li>
+						<img src="img/444.png" />
+						<p>发现</p>
+					</li>
+					</a>
+					<a href="index6.html">
+					<li>
+						<img src="img/22.png" />
+						<p style="color: #fd9528;">直播</p>
+					</li>
+					</a>
+					<a href="index4.html">
+					<li>
+						<img src="img/222.png" />
+						<p>聊天</p>
+					</li>
+					</a>
+					<a href="index5.html">
+					<li>
+						<img src="img/555.png" />
+						<p>社区</p>
+					</li>
+					</a>
+				</ul>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			//			$.ajax({
+			//				type: "get",
+			//				url: "http://127.0.0.1:8181/index",
+			//				async: true,
+			//				success: function(data) {
+			//					var obj = JSON.parse(data);
+			//
+			//					var aa = obj.aa;
+			//					var a = '';
+			//					for(var i = 0; i < aa.length; i++) {
+			//						a += '<div class="swiper-slide"><img src="img/' + aa[i].img + '"/></div>'
+			//						console.log(obj)
+			//					}
+			//					$('.box .swiper-wrapper').html(a);
+			//					lb();
+			//				}
+			//			});
+
+			//			function lb() {
+			var mySwiper = new Swiper('.box', {
+				//设置自动滚动
+				autoplay: 3000,
+				autoplayDisableOnInteraction: false,
+				//设置循环
+				loop: true,
+				//设置小圆点
+				pagination: '.swiper-pagination',
+			})
+			var ssSwiper = new Swiper('.scoll', {
+					autoplay: 2000, //可选选项，自动滑动
+					loop: true,
+
+					direction: 'vertical'
+				})
+				//			}
+				
+				var mainSwiper = new Swiper(".nx",{
+				//回调函数  
+				onSlideChangeStart:function(){
+					//console.log(1)
+					//获取激活状态索引值
+					var index = mainSwiper.activeIndex;
+					$("nav li").eq(index).addClass("bor").siblings().removeClass("bor")
+				}
+			});
+			
+			
+			//切换
+			$("nav li").click(function(){
+				//获取当前点击li索引值
+				var index = $(this).index();
+				
+				$("nav li").eq(index).addClass("bor").siblings().removeClass("bor")
+				
+				//mainswiper 根据点击li索引值去切换
+				mainSwiper.slideTo(index)
+			})
+		</script>
+		</script>
+	</body>
+
+</html>

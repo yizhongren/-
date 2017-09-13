@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "微软雅黑";
+    font-size:62.5%;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+.clearfix{
+    clear: both;
+}
+header{
+    width: 100%;
+    height: 47rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}

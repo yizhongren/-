@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="sass/index2.css"/>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="s"><img src="img/发现/1.png"/></div>
+		<header>
+			
+			<img src="img/发现/1.png"/>
+			
+		</header>
+		
+		<div class="a">
+			<ul>
+				<!--<a href="index3.html">
+				<li>
+					<img src="img/发现/2.png"/>
+					<p>角色卡</p>
+				</li>
+				</a>
+				<li>
+					<img src="img/发现/3.png"/>
+					<p>周末趣飞车</p>
+				</li>
+				<li>
+					<img src="img/发现/4.png"/>
+					<p>每月签到</p>
+				</li>
+				<li>
+					<img src="img/发现/5.png"/>
+					<p>手机开宝箱</p>
+				</li>-->
+			</ul>
+		</div>
+		<div class="bb" style="border-bottom: 1rem  solid #f5f5f5;">
+			<h1>精彩推荐</h1>
+			<ul>
+				<!--<li>
+					<img src="img/发现/6.png"/>
+				</li>
+				<li>
+					<img src="img/发现/7.png"/>
+				</li>
+				<li>
+					<img src="img/发现/8.png"/>
+				</li>
+				<li>
+					<img src="img/发现/9.png"/>
+				</li>
+				<li>
+					<img src="img/发现/11.png"/>
+				</li>
+				<li>
+					<img src="img/发现/12.png"/>
+				</li>-->
+			</ul>
+		</div>
+		<div class="b">
+			<h1>游戏特色</h1>
+			<ul>
+				<!--<li>
+					<img src="img/发现/13.png"/>
+				</li>
+				<li>
+					<img src="img/发现/14.png"/>
+				</li>
+				<li>
+					<img src="img/发现/15.png"/>
+				</li>
+				<li>
+					<img src="img/发现/16.png"/>
+				</li>
+				<li>
+					<img src="img/发现/17.png"/>
+				</li>
+				<li>
+					<img src="img/发现/18.png"/>
+				</li>-->
+			</ul>
+		</div>
+		<div class="z">
+		<footer>
+			<ul>
+				<a href="index7.html"><li>
+						<img src="img/333.png" />
+						<p >资讯</p>
+					</li>
+					</a>
+					<a href="index2.html">
+					<li>
+						<img src="img/11.png" />
+						<p style="color: #fd9528;">发现</p>
+					</li>
+					</a>
+					<a href="index6.html">
+					<li>
+						<img src="img/111.png" />
+						<p >直播</p>
+					</li>
+					</a>
+					<a href="index4.html">
+					<li>
+						<img src="img/222.png" />
+						<p>聊天</p>
+					</li>
+					</a>
+					<a href="index5.html">
+					<li>
+						<img src="img/555.png" />
+						<p>社区</p>
+					</li>
+					</a>
+			</ul>
+		</footer>
+		</div>
+		<script type="text/javascript">
+			$.ajax({
+				type: "get",
+				url: "http://127.0.0.1:7777/index2",
+				async: true,
+				success: function(data) {
+					var obj = JSON.parse(data);
+
+					var aa = obj.aa;
+					var a = '';
+					for(var i = 0; i < aa.length; i++) {
+						a += '<a href="index3.html">'
+								+'<li>'
+									+'<img src="img/发现/'+aa[i].img1+'"/>'
+									+'<p>'+aa[i].p1+'</p>'
+								+'</li>'
+								+'</a>'
+								+'<li>'
+									+'<img src="img/发现/'+aa[i].img2+'"/>'
+									+'<p>'+aa[i].p2+'</p>'
+								+'</li>'
+								+'<li>'
+									+'<img src="img/发现/'+aa[i].img3+'"/>'
+									+'<p>'+aa[i].p3+'</p>'
+								+'</li>'
+								+'<li>'
+									+'<img src="img/发现/'+aa[i].img4+'"/>'
+									+'<p>'+aa[i].p4+'</p>'
+								+'</li>'
+					}
+					$('.a ul').html(a);
+					
+					
+					var bb = obj.bb;
+					var b = '';
+					var ob = '';3
+					for(var i = 0; i < 6; i++) {
+						b += '<li><img src="img/发现/'+bb[i].img+'"/></li>'
+					}
+					$('.bb ul').html(b)
+					for(var i = 6; i < 12; i++) {
+						ob += '<li><img src="img/发现/'+bb[i].img+'"/></li>'
+					}
+					$('.b ul').html(ob)
+				}
+			});
+		</script>
+	</body>
+</html>

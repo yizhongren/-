@@ -1,0 +1,118 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body, html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "微软雅黑";
+  font-size: 62.5%; }
+
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.clearfix {
+  clear: both; }
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10; }
+  header img {
+    width: 100%; }
+
+nav {
+  width: 100%;
+  background: #f8f8f6;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  z-index: 10; }
+  nav ul {
+    display: flex;
+    justify-content: space-between; }
+    nav ul li {
+      width: 20%;
+      text-align: center;
+      margin: 0rem 0.8rem;
+      padding: 1rem 0rem; }
+    nav ul .bor {
+      border-bottom: 0.2rem solid #f95a08;
+      color: #f95a08; }
+
+.nx {
+  width: 100%; }
+  .nx .a {
+    width: 100%; }
+    .nx .a ul {
+      width: 100%; }
+      .nx .a ul li {
+        width: 100%;
+        height: 6rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #EEEEEE; }
+        .nx .a ul li .b {
+          float: left; }
+          .nx .a ul li .b img {
+            height: 5rem; }
+        .nx .a ul li .c {
+          display: flex;
+          margin: 0.5rem 0rem;
+          justify-content: space-between; }
+          .nx .a ul li .c span:nth-last-child(1) {
+            color: #bdbdbd; }
+        .nx .a ul li .d {
+          display: flex;
+          justify-content: space-between; }
+          .nx .a ul li .d span:nth-last-child(2) {
+            color: #bdbdbd; }
+          .nx .a ul li .d span:nth-last-child(1) {
+            background: #f9690e;
+            width: 1.5rem;
+            height: 1.5rem;
+            text-align: center;
+            line-height: 1.5rem;
+            border-radius: 50%;
+            color: white; }
+
+footer {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: #f8f8f6;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10; }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }
+    footer ul li img {
+      width: 65%;
+      height: 65%; }
+    footer ul li p {
+      font-size: 1.7rem;
+      color: #6d6c6c; }
+
+.z {
+  width: 100%;
+  height: 76px; }
+
+.x {
+  width: 100%;
+  height: 93px; }
+
+/*# sourceMappingURL=index4.css.map */
